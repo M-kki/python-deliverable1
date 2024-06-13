@@ -18,11 +18,10 @@ if game_option == "3":
     holetwo = int(holetwo)
     holethree = int(holethree)
 
-    par = 3
 
-    holeone_score = holeone - par
-    holetwo_score = holetwo - par
-    holethree_score = holethree - par
+    holeone_score = holeone
+    holetwo_score = holetwo 
+    holethree_score = holethree 
 
     holeone_score = math.ceil(holeone_score)
     holetwo_score = math.ceil(holetwo_score)
