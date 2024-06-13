@@ -28,18 +28,23 @@ if game_option == "3":
     holetwo_score = math.ceil(holetwo_score)
     holethree_score = math.ceil(holethree_score)
 
-    total_score = holeone_score + holetwo_score + holethree_score
+    total_stroke = holeone_score + holetwo_score + holethree_score
 
-    print(f"{username}  good game! Your total score is {total_score}")
+    total_par = 9
 
-    print(f"Your score for {list_of_holes[0]} is {holeone_score}")
-    print(f"Your score for {list_of_holes[1]} is {holetwo_score}")
-    print(f"Your score for {list_of_holes[2]} is {holethree_score}")
+    total_score = total_par - total_stroke
 
-    holeone_score = int(holeone_score)
-    holetwo_score = int(holetwo_score)
-    holethree_score = int(holethree_score)
+    if total_score < 0:
 
+        print(f"Nice try, {username}... Your total par was: +({total_score})")
+
+    elif total_score > 0:
+
+        print(f"Great job {username}! Your total par was: -({total_score})")
+
+    elif total_score == 0:
+
+        print(f"Good game {username}, Your total par was: {total_score}!")
 
 elif game_option == "6":
     holeone = input(f"What is your score for {list_of_holes[0]}? (Par is 3) ")
@@ -61,14 +66,12 @@ elif game_option == "6":
     holefive = int(holefive)
     holesix = int(holesix)
 
-    par = 3
-
-    holeone_score = holeone - par
-    holetwo_score = holetwo - par
-    holethree_score = holethree - par
-    holefour_score = holefour - par
-    holefive_score = holefive - par
-    holesix_score = holesix - par
+    holeone_score = holeone
+    holetwo_score = holetwo
+    holethree_score = holethree
+    holefour_score = holefour
+    holefive_score = holefive
+    holesix_score = holesix
 
     holeone_score = math.ceil(holeone_score)
     holetwo_score = math.ceil(holetwo_score)
@@ -77,23 +80,22 @@ elif game_option == "6":
     holefive_score = math.ceil(holefive_score)
     holesix_score = math.ceil(holesix_score)
 
-    total_score = holeone_score + holetwo_score + holethree_score + holefour_score + holefive_score + holesix_score
+    total_stroke = holeone_score + holetwo_score + holethree_score + holefour_score + holefive_score + holesix_score
 
-    print(f"{username}  good game! Your total score is {total_score}")
+    total_par = 18
 
-    print(f"Your score for {list_of_holes[0]} is {holeone_score}")
-    print(f"Your score for {list_of_holes[1]} is {holetwo_score}")
-    print(f"Your score for {list_of_holes[2]} is {holethree_score}")
-    print(f"Your score for {list_of_holes[3]} is {holefour_score}")
-    print(f"Your score for {list_of_holes[4]} is {holefive_score}")
-    print(f"Your score for {list_of_holes[5]} is {holesix_score}")
+    total_score = total_par - total_stroke
 
-    holeone_score = int(holeone_score)
-    holetwo_score = int(holetwo_score)
-    holethree_score = int(holethree_score)
-    holefour_score = int(holefour_score)
-    holefive_score = int(holefive_score)
-    holesix_score = int(holesix_score)
+    if total_score < 0:
 
+        print(f"Nice try, {username}... Your total par was: +({total_score})")
+
+    elif total_score > 0:
+
+        print(f"Great job {username}! Your total par was: -({total_score})")
+
+    elif total_score == 0:
+
+        print(f"Good game {username}, Your total par was: {total_score}!")
 else:
     print("Please enter 3 or 6")
